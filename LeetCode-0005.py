@@ -1,22 +1,12 @@
 class Solution:
     def longestPalindrome(self, s):
-        max_palindrome_substring = ''
-        
-        current_substring_l = []
 
-        while len(max_palindrome_substring) < len(s):
+        # moving from left to right look for a two character palindrome
+          # if found extend index by 1 to the left and right then check if this is a palindrome and if so continue until you find the largest
 
-            for c in list(s):
+        # moving from left to right look for a three character palindrome
+          # if found extend index by 1 to the left and right then check if this is a palindrome and if so continue until you find the largest
 
-                current_substring_l.append(c)
-                current_substring_s = ''.join(current_substring_l)
-
-                if current_substring_s == current_substring_s[::-1]:
-                    if len(current_substring_s) > len(max_palindrome_substring):
-                        max_palindrome_substring = current_substring_s
-                
-            s = s[1::]
-            current_substring_l = []
                 
         return max_palindrome_substring
 
